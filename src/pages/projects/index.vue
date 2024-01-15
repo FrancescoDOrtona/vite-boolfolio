@@ -1,12 +1,12 @@
 <template>
     <div>
         <div class="container">
-            <h1>Projects</h1>
+            <h1 class="title">Projects</h1>
         </div>
     </div>
     <div class="container">
         <div class="grid">
-            <ProjectCard v-for="project in projects" :post ="project" :key="project.id" />
+            <ProjectCard v-for="project in projects" :project="project" :key="project.id" />
         </div>
     </div>
 </template>
@@ -47,5 +47,9 @@ export default {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(4,1fr);
+  }
+
+  .title{
+    margin: 20px 0px;
   }
 </style>

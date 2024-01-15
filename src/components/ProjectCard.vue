@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img :src="project.img" alt="">
+        <img class="card_img" :src="project.img" alt="">
         <h3>{{ project.title }}</h3>
         <p v-if="project.type">{{ project.type.name }}</p>
         <p>{{ project.description }}</p>
@@ -23,5 +23,9 @@ export default {
     padding: 20px;
     border-radius: 15px;
     background-color: aqua;
+}
+
+.card_img{
+    width: 100%;
 }
 </style>
