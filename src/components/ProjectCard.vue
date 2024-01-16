@@ -26,6 +26,9 @@ export default {
     padding: 20px;
     border-radius: 15px;
     background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .card_img{

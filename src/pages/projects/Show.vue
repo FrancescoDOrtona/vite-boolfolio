@@ -1,12 +1,14 @@
 <template>
     <div v-if="project">
-        <div class="container">
-            <div>
+        <div class="container info">
+            <div class="info_img">
                 <img :src="project.img" alt="">
             </div>
-            <h1>{{ project.title }}</h1>
-            <small>{{ project.type?.name }}</small>
-            <p>{{ project.description }}</p>
+            <div class="info_content">
+                <h1>{{ project.title }}</h1>
+                <small>{{ project.type?.name }}</small>
+                <p>{{ project.description }}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -34,4 +36,26 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.info {
+    margin-top: 100px;
+    display: flex;
+    gap: 50px;
+}
+
+.info_img {
+    display: block;
+    img{
+        width: 100%;
+    }
+}
+.info_content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    small{
+        color: red;
+        font-weight: bold;
+    }
+}
+</style>
