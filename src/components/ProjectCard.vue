@@ -4,6 +4,9 @@
         <h3>{{ project.title }}</h3>
         <p v-if="project.type">{{ project.type.name }}</p>
         <p>{{ project.description }}</p>
+        <router-link :to="{ name: 'project.show' , params:{ slug: project,slug } }">
+            <button>More Info</button>
+        </router-link>
     </div>
 </template>
 
