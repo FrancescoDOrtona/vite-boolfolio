@@ -1,15 +1,16 @@
 <script>
-import ProjectIndex from './pages/projects/index.vue';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   components: {
-    ProjectIndex
+    AppHeader
   },
 };
 </script>
 
 <template>
-  <ProjectIndex/>
+  <AppHeader/>
+  <router-view></router-view>
 </template>
 
 <style lang="scss">
