@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="container content">
         <h2>Contact Us</h2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error eum aut sapiente debitis illum doloribus recusandae iure ab laboriosam rem!</p>
     </div>
