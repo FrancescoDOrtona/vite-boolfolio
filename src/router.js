@@ -8,23 +8,23 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
-      name: "home",
+      path: '/',
+      name: 'home',
       component: Homepage,
     },
     {
-      path: "/projects",
-      name: "projects",
+      path: '/projects',
+      name: 'projects',
       component: PageIndex,
     },
     {
-        path: "/contacts",
-        name: "contacts",
+        path: '/contacts',
+        name: 'contacts',
         component: ContactPage
     },
     {
-        path: "/project/:slug",
-        name: "project.show",
+        path: '/project/:slug',
+        name: 'project.show',
         props: true,
         component: ShowPage
     }
