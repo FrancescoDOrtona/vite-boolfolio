@@ -1,5 +1,5 @@
 <script>
-import AppHeader from './components/AppHeader.vue';
+import AppHeader from './components/AppHeader.vue'
 
 export default {
   components: {
@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-  <AppHeader/>
+  <AppHeader />
   <router-view></router-view>
 </template>
 
