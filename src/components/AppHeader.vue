@@ -2,7 +2,10 @@
     <div>
         <nav class="nav-bar">
             <div class="logo">
-                <img src="../../public/Portfolio.hu_full_logo.png" alt="logo">
+                <router-link :to="{ name:'home'}">
+                    <img src="../../public/Portfolio.hu_full_logo.png" alt="logo">
+                </router-link>
+                
             </div>
             <ul class="nav-bar_items">
                 <li>
@@ -11,7 +14,9 @@
                 <li>
                     <router-link :to="{ name:'projects'}">Portfolio</router-link>
                 </li>
-                <li>Contacts</li>
+                <li>
+                    <router-link :to="{ name: 'contacts'}">Contacts</router-link>
+                </li>
             </ul>
         </nav>
     </div>
