@@ -2,8 +2,12 @@
     <div>
         <nav class="nav-bar">
             <ul class="nav-bar_items">
-                <li>Home</li>
-                <li>Portfolio</li>
+                <li>
+                    <router-link :to="{ name:'home'}">Home</router-link>
+                </li>
+                <li>
+                    <router-link :to="{ name:'projects'}">Portfolio</router-link>
+                </li>
                 <li>Contacts</li>
             </ul>
         </nav>
