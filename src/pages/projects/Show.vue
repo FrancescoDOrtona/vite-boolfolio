@@ -28,7 +28,11 @@ export default {
             axios.get(`http://127.0.0.1:8000/api/projects/${this.slug}`)
                 .then((res) => {
                     this.project = res.data.project
-                })
+                }).catch((error) => {
+        if(error.response.status === 404) {
+          this.$router.push({ name: 'error' })
+        }
+      })
         }
     }, created() {
         this.fetchProject()

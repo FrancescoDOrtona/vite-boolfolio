@@ -9,6 +9,11 @@
             <ProjectCard v-for="project in projects" :project="project" :key="project.id" />
         </div>
     </div>
+    <div class="container">
+        <ul class="pagination">
+          <li></li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -21,18 +26,24 @@ export default {
   data() {
     return {
       projects: [],
+      page: 1,
+      lastpage: 0
     }
   },
   methods: {
     fetchProjects() {
-      axios.get('http://127.0.0.1:8000/api/projects').then((res) => {
+      axios.get('http://127.0.0.1:8000/api/projects', {
+        params: {
+          page: this.page
+        }
+      }).then((res) => {
         console.log(res)
         this.projects = res.data.results.data
-      }).catch((error) => {
-        if(error.response.status === 404) {
-          this.$router.push({ name: 'error' })
-        }
+        this.lastPage = res.data.results.last_page
       })
+    },
+    setPage(){
+      this.page = n
     }
   },
   created() {
