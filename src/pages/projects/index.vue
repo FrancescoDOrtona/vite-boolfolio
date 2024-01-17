@@ -28,6 +28,10 @@ export default {
       axios.get('http://127.0.0.1:8000/api/projects').then((res) => {
         console.log(res)
         this.projects = res.data.results.data
+      }).catch((error) => {
+        if(error.response.status === 404) {
+          this.$router.push({ name: 'error' })
+        }
       })
     }
   },

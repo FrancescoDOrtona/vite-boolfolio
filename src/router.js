@@ -1,8 +1,9 @@
-import { createRouter, createWebHistory } from "vue-router";
-import Homepage from './pages/Homepage.vue';
+import { createRouter, createWebHistory } from "vue-router"
+import Homepage from './pages/Homepage.vue'
 import PageIndex from './pages/projects/index.vue'
 import ContactPage from './pages/Contacts.vue'
 import ShowPage from './pages/projects/Show.vue'
+import ErrorPage from './pages/404.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,6 +28,11 @@ const router = createRouter({
         name: 'project.show',
         props: true,
         component: ShowPage
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'error',
+      component: ErrorPage
     }
   ],
 });
