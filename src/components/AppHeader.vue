@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 3px;
     border-bottom: 2px solid lightblue;
     box-shadow: -1px 5px 10px 2px rgba(0, 0, 2, 0.3);
 }
@@ -52,7 +52,7 @@
     align-self: flex-start;
 }
 .logo img{
-    width: 80px;
+    width: 100px;
     display: block;
 }
 </style>
