@@ -11,7 +11,7 @@
     </div>
     <div class="container">
         <ul class="pagination">
-          <li v-for="n in lastPage" :key="n" @click="setPage(n)">{{ n }}</li>
+          <li v-for="n in lastPage" :key="n" @click="setPage(n)" :class="{'active': n === page}">{{ n }}</li>
         </ul>
     </div>
 </template>
@@ -28,6 +28,12 @@ export default {
       projects: [],
       page: 1,
       lastPage: 0
+    }
+  },
+  watch: {
+    page: function() {
+      this.projects = []
+      this.fetchProjects()
     }
   },
   methods: {
@@ -79,6 +85,13 @@ export default {
       display: flex;
       align-items: center;
       overflow: hidden;
+      font-weight: bold;
+      background-color: cornflowerblue;
+    }
+    .active{
+      background-color: lightcoral;
     }
   }
+
+ 
 </style>
