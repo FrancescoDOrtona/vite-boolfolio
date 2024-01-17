@@ -151,7 +151,7 @@ i {
 	left: 0px;
 	transition-duration:0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	background-color: whitesmoke;
+	background-color: #fff;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 }
@@ -160,7 +160,7 @@ i {
 	position: absolute;
 	width: 25px;
 	height: 25px;
-	background-color: whitesmoke;
+	background-color: #fff;
 	bottom: 10px;
 }
 .hori-selector .right{

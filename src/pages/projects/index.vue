@@ -78,7 +78,7 @@ export default {
     padding: 30px;
     li{
       cursor: pointer;
-      border: 1px solid cornflowerblue;
+      border: 1px solid #5161ce;
       border-radius: 50%;
       aspect-ratio: 1;
       padding: 8px;
@@ -86,10 +86,11 @@ export default {
       align-items: center;
       overflow: hidden;
       font-weight: bold;
-      background-color: cornflowerblue;
+      background-color: #5161ce;
     }
     .active{
-      background-color: lightcoral;
+      background-color: rgb(109, 11, 173);
+      border: 1px solid rgb(109, 11, 173);
     }
   }
 
