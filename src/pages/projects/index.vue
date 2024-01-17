@@ -11,7 +11,7 @@
     </div>
     <div class="container">
         <ul class="pagination">
-          <li></li>
+          <li v-for="n in lastPage" :key="n" @click="setPage(n)">{{ n }}</li>
         </ul>
     </div>
 </template>
@@ -27,7 +27,7 @@ export default {
     return {
       projects: [],
       page: 1,
-      lastpage: 0
+      lastPage: 0
     }
   },
   methods: {
@@ -42,7 +42,7 @@ export default {
         this.lastPage = res.data.results.last_page
       })
     },
-    setPage(){
+    setPage(n){
       this.page = n
     }
   },
@@ -63,5 +63,22 @@ export default {
 
   .title{
     margin: 20px 0px;
+  }
+
+  .pagination{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    li{
+      cursor: pointer;
+      border: 1px solid cornflowerblue;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
   }
 </style>
